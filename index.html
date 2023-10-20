@@ -48,6 +48,7 @@
 
 	<!-- CSS
    ================================================== -->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/base.css">
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/vendor.css">
@@ -55,7 +56,9 @@
 	<!-- script
    ================================================== -->
 	<script src="js/modernizr.js"></script>
-	<script src="js/pace.min.js"></script>
+	<!-- <script src="js/pace.min.js"></script> -->
+	<script src="js/loader.js"></script>
+
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<!--     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-153937526-1"></script> -->
@@ -70,35 +73,78 @@
 	<link rel="icon" type="image/png" href="g-company-name-initial-letter-icon-g-monogram_302321-1909.avif">
 
 </head>
+<style>
+	.navbar.bg-black {
+		background-color: #000; /* Extremely dark black color */
+	}
+
+	.navbar.navbar-light .navbar-toggler-icon {
+		background-color: #ff0000; /* Red color for the menu icon */
+	}
+
+	.navbar-toggler-icon:focus {
+		outline: none; /* Remove outline on focus (for accessibility) */
+	}
+
+	.navbar .navbar-brand {
+		padding: 0;
+	}
+
+	.navbar .navbar-brand img {
+		max-height: 40px; /* Adjust the max height as needed */
+	}
+
+	.navbar .navbar-nav .nav-item .nav-link {
+		color: #fff !important; /* White color for unselected links */
+		transition: color 0.3s; /* Smooth color transition */
+	}
+
+	.navbar .navbar-nav .nav-item .nav-link:hover {
+		color: #ff0000 !important; /* Red color on link hover */
+	}
+
+	.navbar .navbar-nav .nav-item.active .nav-link {
+		background-color: #ff0000; /* Red color for selected menu item */
+		color: #000 !important; /* Black text color on selected menu item */
+	}
+</style>
 
 <body id="top">
 
 	<!-- <div id="particles-js"></div> -->
 	<!-- header 
    ================================================== -->
-	<header>
-		<div class="">
+   <header>
+	<nav class="navbar navbar-expand-lg navbar-light bg-black">
+		<a class="navbar-brand" href="index.html">
+			<img src="/images/Glogo3.png" alt="Gagan Yadav Logo">
+		</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNav">
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item">
+					<a class="nav-link text-white" href="#intro" title="">Home</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link text-white" href="#about" title="">About</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link text-white" href="#resume" title="">Resume</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link text-white" href="#portfolio" title="">Portfolio</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link text-white" href="#contact" title="">Contact</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+</header>
 
-			<div class="bar">
-				<a class="menu-toggle" href="#"><span>Menu</span></a>
 
-				<div class="logo">
-					<a href="index.html">Gagan Yadav</a>
-				</div>
-
-				<nav id="main-nav-wrap">
-					<ul class="main-navigation">
-						<li class="current"><a class="smoothscroll" href="#intro" title="">Home</a></li>
-						<li><a class="smoothscroll" href="#about" title="">About</a></li>
-						<li><a class="smoothscroll" href="#resume" title="">Resume</a></li>
-						<li><a class="smoothscroll" href="#portfolio" title="">Portfolio</a></li>
-						<li><a class="smoothscroll" href="#contact" title="">Contact</a></li>
-					</ul>
-				</nav>
-			</div> <!-- /top-bar -->
-
-		</div> <!-- /row -->
-	</header> <!-- /header -->
 
 	<!-- intro section
    ================================================== -->
@@ -741,37 +787,17 @@
 			<div class="col-twelve">
 
 				<!-- form -->
-				<form name="form" id="contactForm" method="POST" action="https://formspree.io/f/mzbqwvbz">
-					<fieldset>
+			
 						<div class="form-field">
-							<input name="name" type="text" id="contactName" placeholder="Name" value="" minlength="2"
-								required="">
-						</div>
-						<div class="form-field">
-							<input name="email_from" type="email" id="contactEmail" placeholder="Email" value=""
-								required="">
-						</div>
-						<div class="form-field">
-							<input name="_subject" type="text" id="contactSubject" placeholder="Subject" value="">
-						</div>
-						<div class="form-field">
-							<textarea name="message" id="contactMessage" placeholder="message" rows="10" cols="50"
-								required=""></textarea>
-						</div>
-						<div class="form-field">
-							<button class="submitform" name="submit">Submit</button>
-							<div id="submit-loader">
-								<div class="text-loader">Sending...</div>
-								<div class="s-loader">
-									<div class="bounce1"></div>
-									<div class="bounce2"></div>
-									<div class="bounce3"></div>
-								</div>
-							</div>
+							<button class="submitform" name="submit">
+							<a style="color: rgb(47, 72, 234);" class="email-link" href="mailto:gaganyadav7974@gmail.com">
+								<i>Say Hello ! </i>
+							</a>
+						</button>
+							
 						</div>
 
-					</fieldset>
-				</form>
+		
 
 				<!-- contact-warning -->
 				<div id="message-warning">
@@ -797,12 +823,13 @@
 
 				<p>
 					Kalindi Gold City, Pearl Sector, Indore<br>
-					453555 India
+					453555 India 
 				</p>
 
 			</div>
 
-			<div class="col-four tab-full collapse">
+			
+			<div class="col-four tab-full">
 
 				<div class="icon">
 					<i class="icon-mail"></i>
@@ -811,11 +838,9 @@
 				<h5>Email Me At</h5>
 
 				<p>gaganyadav7974@gmail.com<br>
-					gagan.yadav-ic-2k19-27@iips.edu.in
+				   gagan.yadav-ic-2k19-27@iips.edu.in
 				</p>
-
 			</div>
-
 			<div class="col-four tab-full">
 
 				<div class="icon">
@@ -827,6 +852,8 @@
 				<p>Phone: Telegram (<a href="https://t.me/HYDRO_N">GaganYadav</a>)
 				</p>
 			</div>
+
+			
 
 		</div> <!-- /contact-info -->
 
@@ -959,6 +986,22 @@
 			retina_detect: true
 		});
 	</script>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+	$(document).ready(function() {
+		// Close the menu when a menu item is clicked
+		$('.navbar-nav .nav-link').click(function() {
+			if ($('.navbar-toggler').is(':visible')) {
+				$('.navbar-toggler').click();
+			}
+		});
+	});
+</script>
+
 
 </body>
 
