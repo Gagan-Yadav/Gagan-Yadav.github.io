@@ -52,12 +52,14 @@
 	<link rel="stylesheet" href="css/base.css">
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/vendor.css">
+	<link rel="stylesheet" href="css/loading.css">
 
 	<!-- script
    ================================================== -->
 	<script src="js/modernizr.js"></script>
 	<!-- <script src="js/pace.min.js"></script> -->
 	<script src="js/loader.js"></script>
+	<script src="js/loading.js"></script>
 
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
@@ -76,6 +78,7 @@
 <style>
 	.navbar.bg-black {
 		background-color: #000; /* Extremely dark black color */
+		/* border-bottom: 2px double red; */
 	}
 
 	.navbar.navbar-light .navbar-toggler-icon {
@@ -109,9 +112,17 @@
 	}
 </style>
 
-<body id="top">
+<body id="top" >
 
 	<!-- <div id="particles-js"></div> -->
+	<div id="loading-overlay">
+        <div class="logo-container">
+            <svg viewBox="0 0 100 100" class="hexagon">
+				<polygon points="50,51 95,27 95,85 50,110 5,85 5,27"/>
+            </svg>
+            <div class="letter">₲</div>
+        </div>
+    </div>
 	<!-- header 
    ================================================== -->
    <header>
@@ -172,7 +183,7 @@
 					<p class="intro-position">
 						<span>Developer</span>
 						<span>Starter</span>
-						<!-- <span>YouTuber</span> -->
+						<span>Explorer</span>
 					</p>
 
 					<a class="button stroke smoothscroll" href="#about" title="">More About Me</a>
@@ -223,11 +234,7 @@
 			<div class="col-six tab-full">
 
 				<h3>Profile</h3>
-				<p>A Computer Science MCA student from International Institute of Professional Studies, DAVV with
-					excellent academic background and diverse skillset. Experienced in Web, System Applications.
-					I am well versed with Web Development, Rest Apis,React JS, Node JS, Java, C++ and basics of
-					JavaScript & CSS.
-					and in Databases MySQL and Monogodb.</p>
+				<p>A Computer Science MCA student from the International Institute of Professional Studies, DAVV, with an excellent academic background and a diverse skill set. Experienced in web and system applications, I am well-versed in web development, REST APIs, React.js, Node.js, Java, and C++. I also have a solid understanding of JavaScript and CSS. Additionally, I have experience working with databases such as MySQL, MongoDB, and Firebase. I am proficient in DBMS and data structures and algorithms, and I possess high creativity.</p>
 
 				<ul class="info-list">
 					<li>
@@ -246,6 +253,15 @@
 						<strong>Email:</strong>
 						<span>gaganyadav7974@gmail.com</span>
 
+					</li>
+					<li>
+						<strong>Work Sample:</strong>
+					</li>
+					<li>
+						<span><a href="https://linkedin-clone-by-gagan.vercel.app/" target="_blank">1. linkedin Clone</a></span>
+					</li>
+					<li>
+						<span><a href="https://vvuniqueinfotech.vercel.app/" target="_blank">2. VVuniqueInfotech</a></span>
 					</li>
 
 				</ul> <!-- /info-list -->
@@ -270,7 +286,7 @@
 					</li>
 					<li>
 						<!--                         <div class="progress percent90"><span>90%</span></div> -->
-						<strong>My sql and mongodb</strong>
+						<strong>MySql, Mongodb, Firebase</strong>
 					</li>
 					<li>
 						<!--                         <div class="progress percent85"><span>90%</span></div> -->
@@ -339,14 +355,13 @@
 
 						<div class="timeline-header">
 							<h3>Master's Degree</h3>
-							<p>July 2019 - Present(2024)</p>
+							<p>2019 - 2024</p>
 						</div>
 
 						<div class="timeline-content">
 							<h4><a href="https://iips.edu.in/">International Institute of Professional Studies</a>
 							</h4>
-							<p>Currently pursuing MCA Degree specialization in Computer Science (CSE) at International
-								Institute of Professional Studies College, Bhawarkua - Indore.</p>
+							<p>I have completed my MCA degree with a specialization in Computer Science (CSE) at the International Institute of Professional Studies, Bhawarkua - Indore. Throughout my studies, I have undertaken numerous projects and gained knowledge in various technologies.</p>
 						</div>
 
 					</div> <!-- /timeline-block -->
@@ -365,7 +380,7 @@
 
 						<div class="timeline-content">
 							<h4><a href="https://pinkflowerschool.com/">Pink Flower H. S. School</a></h4>
-							<p>Completed my schooling through MadhyaPradesh Board at Pink Flower H. S. School, Nanda
+							<p>Completed my schooling through Madhya Pradesh Board at Pink Flower H. S. School, Nanda
 								Nagar - Indore.</p>
 						</div>
 

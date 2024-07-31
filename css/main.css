@@ -1092,6 +1092,7 @@ header {
 	width: 100%;
 	min-height: 66px;
 	z-index: 600;
+	border-bottom: 2px double red;
 }
 header .row {
 	position: relative;
@@ -1305,7 +1306,7 @@ header{
  * ------------------------------------------------------------------- 
  */
 #intro {
-	/* background: #151515 url(../images/bgg.jpg) no-repeat center bottom; */
+	background: #151515 url(../images/picture-01-4.webp) no-repeat center bottom ;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	background-size: cover;
@@ -1316,7 +1317,9 @@ header{
 	display: table;
 	position: relative;
 	text-align: center;
+	/* filter: blur(10px); */
 }
+
 
 #particles.js{
 	position: absolute;
@@ -2576,3 +2579,7 @@ footer .copyright span:last-child::after {
 }
 
 /*# sourceMappingURL=main.css.map */
+/* Hide scrollbar for Webkit browsers */
+body::-webkit-scrollbar {
+    display: none;
+}
