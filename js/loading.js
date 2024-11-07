@@ -8,5 +8,5 @@ window.addEventListener('load', function() {
         setTimeout(() => {
             mainContent.style.opacity = '1';
         }, 50); // Small delay to ensure display change is processed
-    }, 3000); // Delay of 1 second (1000 milliseconds)
+    }, 1000); // Delay of 1 second (1000 milliseconds)
 });
